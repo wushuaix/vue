@@ -2,19 +2,19 @@
     "status": 0,
     "message": [{
             "url": 1,
-            "img": "http://img2.imgtn.bdimg.com/it/u=2052037511,468610353&fm=26&gp=0.jpg"
+            "img": "/src/images/lunbo_img/id=1&lunbo_img.jpg"
         },
         {
             "url": 2,
-            "img": "http://img0.imgtn.bdimg.com/it/u=3391612632,4250688100&fm=15&gp=0.jpg"
+            "img": "/src/images/lunbo_img/id=2&lunbo_img.jpg"
         },
         {
             "url": 3,
-            "img": "http://img5.imgtn.bdimg.com/it/u=3241147606,3679727879&fm=26&gp=0.jpgg"
+            "img": "/src/images/lunbo_img/id=3&lunbo_img.jpg"
         },
         {
             "url": 4,
-            "img": "http://img4.imgtn.bdimg.com/it/u=1213232124,1323389194&fm=15&gp=0.jpg"
+            "img": "/src/images/lunbo_img/id=4&lunbo_img.jpg"
         }
     ]
 }

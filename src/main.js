@@ -1,6 +1,13 @@
 import Vue from 'vue'
 
 import app from './App.vue'
+
+//导入格式化时间插件
+import moment from 'moment'
+//定义全局时间过滤器
+Vue.filter('dateFormat', function(dataStr, pattern = "YYYY-MM-DD HH:mm:ss") {
+    return moment(dataStr).format(pattern)
+});
 //引进Mint-UI组件
 import { Header, Swipe, SwipeItem } from 'mint-ui';
 //1.1 引进VueRouter
@@ -19,7 +26,8 @@ Vue.component(SwipeItem.name, SwipeItem);
 import VueResource from 'vue-resource'
 //2.2安装VueResource
 Vue.use(VueResource)
-    //引进Mui组件
+
+//引进Mui组件
 import './lib/mui/css/mui.min.css'
 import './lib/mui/css/icons-extra.css'
 import './lib/mui/fonts/mui-icons-extra.ttf'
