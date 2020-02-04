@@ -1,13 +1,13 @@
 <template>
   <div class="cmt-container">
     <h3>发表评论</h3>
-    <textarea placeholder="欢迎来吐槽，最多BB 120个字" maxlength="120" v-model="msg"></textarea>
+    <textarea placeholder="欢迎来吐槽，最多唠嗑120个字" maxlength="120" v-model="msg"></textarea>
     <mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
     <div class="cmt-list">
       <div class="cmt-item" v-for="(item,i) in commentlist" :key="item.username">
         <div
           class="cmt-title"
-        >第{{i+1}}楼&nbsp;&nbsp;用户: {{item.username}}&nbsp;&nbsp;发表时间:{{item.add_time | dateFormat}}</div>
+        >第{{i+1}}楼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户: {{item.username}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发表时间:{{item.add_time | dateFormat}}</div>
         <div class="cmt-body">{{item.comment}}</div>
       </div>
     </div>
@@ -28,9 +28,9 @@ export default {
   created() {
     this.getCommentList();
   },
-  props: ["newsid"],
+  props: ["id"],
   methods: {
-    getCommentList() {this.$http.get(`${path.join(__dirname,"src/datajson/comment/comment_" +this.newsid +this.pageIndex +".json")}`)
+    getCommentList() {this.$http.get(`${path.join(__dirname,"src/datajson/comment/comment_" +this.id +this.pageIndex +".json")}`)
         .then(result => {
           if (result.body.status === 0) {
             this.commentlist = this.commentlist.concat(result.body.message);
@@ -64,11 +64,11 @@ export default {
 .cmt-container {
   h3 {
     font-size: 18px;
+    margin: 2px;
   }
   textarea {
     font-size: 12px;
     height: 90px;
-    margin: 0;
   }
   .cmt-list {
     margin: 5px 0;
@@ -80,8 +80,9 @@ export default {
         background-color: #ccc;
       }
       .cmt-body {
-        line-height: 35px;
+        line-height: 30px;
         text-indent: 2em;
+        margin:0 3px
       }
     }
   }

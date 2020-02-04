@@ -32,7 +32,7 @@ export default {
     },
     methods:{
         getNewList(){
-        this.$http.get(`${path.join(__dirname, "src/datajson/newslist.json")}`)
+        this.$http.get(path.join(__dirname, "src/datajson/newslist.json"))
         .then(result => {
           if (result.body.status === 0) {
             this.newlist = result.body.message;

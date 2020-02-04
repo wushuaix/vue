@@ -1,0 +1,36 @@
+{
+    "status": 0,
+    "message": [{
+            "id": 1,
+            "title": "甘福源,陕西黄河蜜瓜10斤甜当季水果应季批发整包邮",
+            "sell_price": 39.8,
+            "market_price": 168,
+            "stock_quantity": 1405,
+            "img_url": "src/images/goods_img/11.jpg"
+        },
+        {
+            "id": 2,
+            "title": "山西平遥特产冠云平遥牛肉180g*6袋大块精品牛肉年货礼品盒送礼",
+            "sell_price": 198.78,
+            "market_price": 218.78,
+            "stock_quantity": 45,
+            "img_url": "src/images/goods_img/21.jpg"
+        },
+        {
+            "id": 3,
+            "title": "[手工醋]山西特产 宁化府上水井手工十年老陈醋礼盒500mL*2坛",
+            "sell_price": 298,
+            "market_price": 459,
+            "stock_quantity": 1053,
+            "img_url": "src/images/goods_img/31.jpg"
+        },
+        {
+            "id": 4,
+            "title": "山西杏花村汾酒 竹叶青酒45度玻璃瓶475mL*6瓶露酒礼盒装",
+            "sell_price": 289,
+            "market_price": 319,
+            "stock_quantity": 100,
+            "img_url": "src/images/goods_img/41.jpg"
+        }
+    ]
+}

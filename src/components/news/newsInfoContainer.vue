@@ -8,8 +8,8 @@
 
     <hr />
 
-    <div v-html='content'></div>
-    <comment-box :newsid="this.id"></comment-box>
+    <div v-html='content' class="content"></div>
+    <comment-box :id="this.id"></comment-box>
     
   </div>
 </template>    
@@ -41,7 +41,7 @@ export default {
             Toast("新闻列表加载失败！");
           };        
         });
-      this.$http.get(`${path.join(__dirname, "src/datajson/newshtml/content_"+this.id+".html")}`)
+      this.$http.get(path.join(__dirname, "src/datajson/newshtml/content_"+this.id+".html"))
         .then(result => {
           if(result){
             this.content=result.body.toString();
@@ -53,13 +53,19 @@ export default {
   },
   components:{
     "comment-box":comment
+  },
+  watch:{
+    'newsinfo':function(newVal,oldVal){
+        return newVal
+    }
   }
 };
 </script>
 
 <style lang="scss">
 .newsInfo-container {
-  .title {
+  font-family: 'Times New Roman', Times, "宋体";
+  .title {    
     font-size: 16px;
     margin: 10px;
     text-align: center;
@@ -69,14 +75,11 @@ export default {
     color: #226aff;
     display: flex;
     justify-content: space-between;
+    padding:3px
   }
   .content {
-    padding: 0;
+    padding: 10px;
     margin: 0
-  }
-  .iframe{
-      width: 100%;
-      height: 300px;
   }
 }
 </style>
