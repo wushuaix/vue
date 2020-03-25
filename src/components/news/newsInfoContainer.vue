@@ -1,9 +1,9 @@
 <template>
   <div class="newsInfo-container">
-    <h3 class="title">{{newsinfo[id-1].title}}</h3>
+    <h3 class="title">{{newsinfo[id-1]?newsinfo[id-1].title:''}}</h3>
     <p class="subtitle">
-      <span>发表时间：{{newsinfo[id-1].add_time | dateFormat}}</span>
-      <span>点击次数：{{newsinfo[id-1].click}}</span>
+      <span>发表时间：{{newsinfo[id-1]?(newsinfo[id-1].add_time):''}}</span>
+      <span>点击次数：{{newsinfo[id-1]?newsinfo[id-1].click:''}}</span>
     </p>
 
     <hr />
